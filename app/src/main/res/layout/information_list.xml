@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:padding="5dp"
+    android:orientation="horizontal"
+    android:background="@drawable/selectable_layout">
+
+    <hc.teacher.user_defined_widget.RoundImageView
+        android:id="@+id/person_head"
+        android:layout_width="40dp"
+        android:layout_height="40dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="5dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/list_subject"/>
+
+            <TextView
+                android:id="@+id/subject"
+                android:layout_width="40dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/list_grade"/>
+
+            <TextView
+                android:id="@+id/grade"
+                android:layout_width="40dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/list_salary"/>
+
+            <TextView
+                android:id="@+id/salary"
+                android:layout_width="40dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:textSize="12sp"/>
+
+            <ImageView
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/list_time"/>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="65dp"
+                android:layout_height="15dp"
+                android:layout_gravity="center"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

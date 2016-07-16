@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="url">http://114.215.98.56:8080/teacher/</string>
+    <!--<string name="url">http://192.168.11.17:8080/</string>-->
+
+    <string name="tencent_map_key">5VABZ-4OOHW-4VVRJ-OQNYG-GFUS5-WZB6X</string>
+
+    <!--临时图片文件保存路径-->
+    <string name="path_temp_image">/temp.png</string>
+
+</resources>

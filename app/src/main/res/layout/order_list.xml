@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="90dp"
+    android:padding="10dp"
+    android:background="@drawable/selectable_layout">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"/>
+
+    <TextView
+        android:id="@+id/sub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="5dp"
+        android:textSize="15sp"
+        android:text="@string/subjectIs"/>
+
+    <TextView
+        android:id="@+id/subject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_toRightOf="@id/sub"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/gra"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@id/subject"
+        android:textSize="15sp"
+        android:text="@string/gradeIs"/>
+
+    <TextView
+        android:id="@+id/grade"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/name"
+        android:layout_toRightOf="@id/gra"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/sal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sub"
+        android:layout_marginLeft="5dp"
+        android:textSize="15sp"
+        android:text="@string/salaryIs"/>
+
+    <TextView
+        android:id="@id/salary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sub"
+        android:layout_toRightOf="@id/sal"
+        android:textSize="15sp"/>
+
+    <ImageView
+        android:id="@+id/enter"
+        android:layout_width="10dp"
+        android:layout_height="30sp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/more_information"/>
+
+    <TextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sub"
+        android:layout_toLeftOf="@id/enter"
+        android:layout_marginRight="20dp"/>
+
+</RelativeLayout>

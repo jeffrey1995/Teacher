@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="option_click_to_choose">点击选择</string>
+
+    <string name="prompt_find_title">*招聘标题</string>
+    <string name="prompt_find_subject">*需要科目</string>
+    <string name="prompt_find_grade">*年级</string>
+    <string name="prompt_find_time">*工作时间</string>
+    <string name="prompt_find_salary">*工资待遇</string>
+    <string name="prompt_find_gender">性别</string>
+    <string name="prompt_find_gender_need">性别要求</string>
+    <string name="prompt_find_description">招聘描述</string>
+    <string name="prompt_find_address">*工作地址</string>
+    <string name="prompt_find_email">联系邮箱</string>
+    <string name="prompt_find_phone">*联系电话</string>
+    <string name="prompt_find_linkman">*联系人</string>
+
+    <string name="prompt_do_title">*求职标题</string>
+    <string name="prompt_do_subject">*擅长科目</string>
+    <string name="prompt_do_grade">*适合年级</string>
+    <string name="prompt_do_time">*工作时间</string>
+    <string name="prompt_do_salary">*工资需求</string>
+    <string name="prompt_do_self_description">个人简介</string>
+    <string name="prompt_do_work_area">*工作地址</string>
+    <string name="prompt_do_email">联系邮箱</string>
+    <string name="prompt_do_phone">*联系电话</string>
+    <string name="prompt_do_linkman">*联系人</string>
+
+    <string name="hint_find_title">请输入找家教标题</string>
+    <string name="hint_find_salary">请输入有效数字</string>
+    <string name="hint_find_description">请输入相关的工作环境情况，教师要求等</string>
+    <string name="hint_find_address">手动输入或在地图上进行标记</string>
+    <string name="hint_find_email">请输入正确有效的邮箱地址</string>
+    <string name="hint_find_phone">请输入正确有效的联系电话</string>
+    <string name="hint_find_linkman">请输入负责人的真实姓名</string>
+
+    <string name="option_find_subject_math">数学</string>
+    <string name="option_find_subject_chinese">语文</string>
+    <string name="option_find_gender_male">男</string>
+    <string name="option_find_gender_female">女</string>
+    <string name="option_find_gender_both">均可</string>
+    <string name="option_find_allow_message">允许短信报名</string>
+    <string name="option_find_allow_phone">允许电话咨询</string>
+
+    <string name="option_do_allow_phone">允许电话联系</string>
+
+    <string name="option_agree">我已经阅读并同意人人家教家教招聘安全协议</string>
+
+    <string name="select_title_subject">选择科目</string>
+    <string name="select_title_grade">选择年级</string>
+    <string name="select_title_time">选择时间</string>
+
+</resources>

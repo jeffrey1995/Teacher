@@ -1,0 +1,154 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="hc.teacher.activity_teacher_center.AddNewContactActivity">
+
+    <!--顶部导航栏-->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@color/theme_color"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_GoBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:scaleType="fitCenter"
+            android:src="@drawable/go_back_white" />
+
+        <TextView
+            android:id="@+id/tv_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="修改地址"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/actionbar_font" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
+
+        <!--联系人-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_height"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView_Prompt"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="联系人" />
+
+            <EditText
+                android:id="@+id/et_Name"
+                style="@style/EditText"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="5"
+                android:hint="你的姓名"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <!--联系电话-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_height"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView_Prompt"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="联系电话" />
+
+            <EditText
+                android:id="@+id/et_Phone"
+                style="@style/EditText"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="5"
+                android:hint="你的手机号"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <!--上课地址-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bigger_height"
+            android:layout_marginTop="@dimen/margin_middle"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView_Prompt"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="上课地址" />
+
+            <EditText
+                android:id="@+id/et_Address"
+                style="@style/EditText"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="5"
+                android:hint="详细地址（小区/学校）" />
+
+        </LinearLayout>
+
+        <!--确定按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_Submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_height"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/round_button"
+                android:gravity="center"
+                android:text="确定"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_middle" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

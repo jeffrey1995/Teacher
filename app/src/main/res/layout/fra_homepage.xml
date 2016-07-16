@@ -1,0 +1,760 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F0E9"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@color/theme_color">
+
+        <LinearLayout
+            android:id="@+id/ll_City"
+            android:layout_width="90dp"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_City"
+                android:layout_width="21dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/location"
+                android:scaleType="fitCenter" />
+
+            <TextView
+                android:id="@+id/txt_City"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:text="大连"
+                android:layout_marginStart="5dp"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/app_name"
+            android:textColor="#FFFFFF"
+            android:textSize="23sp" />
+
+        <ImageButton
+            android:id="@+id/search_imbtn"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:background="#00000000"
+            android:scaleType="fitCenter"
+            android:src="@drawable/search" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="140dp">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpager"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"></android.support.v4.view.ViewPager>
+
+                <LinearLayout
+                    android:id="@+id/viewGroup"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/viewpager"
+                    android:gravity="right"
+                    android:orientation="horizontal"
+                    android:padding="5dip" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/chinese_ll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selectable_layout"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/chinese_iv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/sub_chinese" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chinese"
+                            android:textColor="@color/homepage1"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp" />
+
+                    <LinearLayout
+                        android:id="@+id/biology_ll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selectable_layout"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/biology_iv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/sub_biology" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/biology"
+                            android:textColor="@color/homepage1"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/math_ll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selectable_layout"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/math_iv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/sub_math" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/math"
+                            android:textColor="@color/homepage1"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp" />
+
+                    <LinearLayout
+                        android:id="@+id/geography_ll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selectable_layout"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/geography_iv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/sub_geography" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/geography"
+                            android:textColor="@color/homepage1"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/english_ll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selectable_layout"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/english_iv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/sub_english" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/english"
+                            android:textColor="@color/homepage1"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp" />
+
+                    <LinearLayout
+                        android:id="@+id/politics_ll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selectable_layout"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/politics_iv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/sub_politics" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/politics"
+                            android:textColor="@color/homepage1"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/physics_ll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selectable_layout"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/physics_iv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/sub_physics" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/physics"
+                            android:textColor="@color/homepage1"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp" />
+
+                    <LinearLayout
+                        android:id="@+id/history_ll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selectable_layout"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/history_iv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/sub_history" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/history"
+                            android:textColor="@color/homepage1"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="150dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/chem_ll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selectable_layout"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/chem_iv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/sub_chem" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/chem"
+                            android:textColor="@color/homepage1"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="5dp" />
+
+                    <LinearLayout
+                        android:id="@+id/other_ll"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selectable_layout"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/other_iv"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:scaleType="fitCenter"
+                            android:src="@drawable/sub_other" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/other"
+                            android:textColor="@color/homepage1"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:id="@+id/enter_consult"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selectable_layout"
+                    android:gravity="center"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/consult_online"
+                        android:layout_width="20dp"
+                        android:layout_height="40dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/consult_online" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/consult_online"
+                        android:text="@string/consult_online"
+                        android:textColor="@color/homepage1"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider" />
+
+                <RelativeLayout
+                    android:id="@+id/enter_answer"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selectable_layout"
+                    android:gravity="center"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:id="@+id/answer_online"
+                        android:layout_width="25dp"
+                        android:layout_height="40dp"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/answer_online" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/answer_online"
+                        android:text="@string/answer_online"
+                        android:textColor="@color/homepage1"
+                        android:textSize="15sp" />
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mien"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/homepage2"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/enter_mien"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/more_mien"
+                    android:textColor="@color/homepage3"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:orientation="horizontal">
+
+                    <hc.teacher.user_defined_widget.RoundImageView
+                        android:id="@+id/image1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitCenter"
+
+                        android:src="@drawable/temp1"/>
+
+                    <TextView
+                        android:id="@+id/mien_name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/image1"
+                        android:layout_marginLeft="5dp"
+                        android:text="田熙颖"
+                        android:textColor="@color/theme_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mien_name1"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/homepage3"
+                        android:layout_toRightOf="@id/image1"
+                        android:text="     田熙颖是来自大连理工大学软件..."/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:orientation="horizontal">
+
+                    <hc.teacher.user_defined_widget.RoundImageView
+                        android:id="@+id/image2"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerVertical="true"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/temp2" />
+
+                    <TextView
+                        android:id="@+id/mien_name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/image2"
+                        android:layout_marginLeft="5dp"
+                        android:text="徐京世"
+                        android:textColor="@color/theme_color"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/mien_name2"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/homepage3"
+                        android:layout_toRightOf="@id/image2"
+                        android:text="     徐京世是来自大连理工大学软件..."/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/gaokao"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/homepage2"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/enter_gaokao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/more_gaokao"
+                    android:textColor="@color/homepage3"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:orientation="horizontal">
+
+                    <hc.teacher.user_defined_widget.RoundImageView
+                        android:id="@+id/image3"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="fitCenter"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/temp3" />
+
+                    <TextView
+                        android:id="@+id/mien_name3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/image3"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/theme_color"
+                        android:textSize="14sp"
+                        android:text="志愿填报"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/image3"
+                        android:layout_below="@id/mien_name3"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/homepage3"
+                        android:text="     为考生提供最权威的全国各高校..."/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="70dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="5dp"
+                    android:orientation="horizontal">
+
+                    <hc.teacher.user_defined_widget.RoundImageView
+                        android:id="@+id/image4"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:scaleType="fitCenter"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/temp4" />
+
+                    <TextView
+                        android:id="@+id/mien_name4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/image4"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/theme_color"
+                        android:textSize="14sp"
+                        android:text="心理辅导"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/image4"
+                        android:layout_below="@id/mien_name4"
+                        android:layout_marginLeft="5dp"
+                        android:textColor="@color/homepage3"
+                        android:text="具有丰富的高考心理辅导经验...
+                        "/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="15dp" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/forum"
+                    android:paddingLeft="5dp"
+                    android:textColor="@color/homepage2"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/enter_forum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/more_forum"
+                    android:textColor="@color/homepage3"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:background="#FFFFFF">
+
+                <hc.teacher.user_defined_widget.RoundImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:paddingLeft="5dp"
+                    android:src="@drawable/temp5"/>
+
+                <TextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/homepage3"
+                    android:text="我家的孩子自从使用这个软件找到了一个好老师，这次考试成绩有了很大的提高，真的感谢田老师的细心教导。"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

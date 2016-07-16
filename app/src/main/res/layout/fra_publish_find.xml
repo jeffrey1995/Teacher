@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/fra_publish_find"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!--招聘标题-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_height"
+            android:layout_marginTop="@dimen/margin_middle"
+            android:orientation="horizontal"
+            android:textCursorDrawable="@drawable/theme_color_cusor">
+
+            <TextView
+                style="@style/TextView_Prompt"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/prompt_find_title" />
+
+            <EditText
+                android:id="@+id/et_Title"
+                style="@style/EditText"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="5"
+                android:hint="@string/hint_find_title"
+                android:maxLength="20"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <!--科目-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_height"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView_Prompt"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/prompt_find_subject" />
+
+            <Button
+                android:id="@+id/btn_Subject"
+                style="@style/Button_Select"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="5"
+                android:text="@string/option_click_to_choose" />
+
+        </LinearLayout>
+
+        <!--年级-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_height"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView_Prompt"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/prompt_find_grade" />
+
+            <Button
+                android:id="@+id/btn_Grade"
+                style="@style/Button_Select"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="5"
+                android:text="@string/option_click_to_choose" />
+
+        </LinearLayout>
+
+        <!--学生性别-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_height"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView_Prompt"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/prompt_find_gender" />
+
+            <RadioGroup
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="5"
+                android:background="@color/color_white"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_Male"
+                    style="@style/RadioButton"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/option_find_gender_male" />
+
+                <RadioButton
+                    android:id="@+id/rb_Female"
+                    style="@style/RadioButton"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/option_find_gender_female" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <!--时间-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_height"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView_Prompt"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/prompt_find_time" />
+
+            <Button
+                android:id="@+id/btn_Time"
+                style="@style/Button_Select"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="5"
+                android:text="@string/option_click_to_choose" />
+
+        </LinearLayout>
+
+        <!--薪酬-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_height"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView_Prompt"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/prompt_find_salary" />
+
+            <EditText
+                android:id="@+id/et_Salary"
+                style="@style/EditText"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="3"
+                android:hint="@string/hint_find_salary"
+                android:inputType="number"
+                android:maxLength="7"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+            <TextView
+                style="@style/TextView_Prompt"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="元/小时" />
+
+        </LinearLayout>
+
+        <!--需求性别-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_height"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView_Prompt"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/prompt_find_gender_need" />
+
+            <RadioGroup
+                android:id="@+id/rg_GenderNeed"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="5"
+                android:background="@color/color_white"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_NeedMale"
+                    style="@style/RadioButton"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/option_find_gender_male" />
+
+                <RadioButton
+                    android:id="@+id/rb_NeedFemale"
+                    style="@style/RadioButton"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/option_find_gender_female" />
+
+                <RadioButton
+                    android:id="@+id/rb_NeedBoth"
+                    style="@style/RadioButton"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/option_find_gender_both" />
+
+            </RadioGroup>
+        </LinearLayout>
+
+        <!--招聘描述-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bigger_height"
+            android:layout_marginTop="@dimen/margin_middle"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView_Prompt"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/prompt_find_description" />
+
+            <EditText
+                android:id="@+id/et_Description"
+                style="@style/EditText"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="5"
+                android:hint="@string/hint_find_description" />
+
+        </LinearLayout>
+
+        <!--工作地址-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/bigger_height"
+            android:layout_marginTop="@dimen/margin_middle"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView_Prompt"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/prompt_find_address" />
+
+            <EditText
+                android:id="@+id/et_Address"
+                style="@style/EditText"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="5"
+                android:hint="@string/hint_find_address" />
+
+        </LinearLayout>
+
+        <!--联系电话-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_height"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView_Prompt"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/prompt_find_phone" />
+
+            <EditText
+                android:id="@+id/et_Phone"
+                style="@style/EditText"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="5"
+                android:hint="@string/hint_find_phone"
+                android:inputType="number"
+                android:maxLength="11"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <!--是否允许公开个人信息-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_height"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_Permit"
+                style="@style/CheckBox_Yellow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_marginStart="@dimen/padding"
+                android:checked="true"
+                android:text="是否允许公开联系方式" />
+
+        </LinearLayout>
+
+        <!--联系人-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_height"
+            android:layout_marginTop="@dimen/margin_small"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/TextView_Prompt"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:text="@string/prompt_find_linkman" />
+
+            <EditText
+                android:id="@+id/et_Name"
+                style="@style/EditText"
+                android:layout_width="@dimen/zero"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginStart="@dimen/margin_small"
+                android:layout_weight="5"
+                android:hint="@string/hint_find_linkman"
+                android:maxLength="15"
+                android:maxLines="1"
+                android:singleLine="true" />
+
+        </LinearLayout>
+
+        <!--同意协议-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/normal_height"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/cb_Agreement"
+                style="@style/CheckBox_Yellow"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/padding"
+                android:layout_marginStart="@dimen/padding"
+                android:checked="true"
+                android:text="@string/option_agree" />
+
+        </LinearLayout>
+
+        <!--提交按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btn_Submit"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_height"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@drawable/round_button"
+                android:gravity="center"
+                android:text="提交"
+                android:textColor="@color/color_white"
+                android:textSize="@dimen/font_size_middle" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="110dp"
+    android:background="@color/background_color"
+    android:paddingBottom="@dimen/margin_small"
+    android:paddingTop="@dimen/margin_small">
+
+    <RelativeLayout
+        android:id="@+id/rl_Item"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/selectable_layout">
+
+        <TextView
+            android:id="@+id/tv_Name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="15dp"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_Phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/tv_Name"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@+id/tv_Name"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_Address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/tv_Name"
+            android:layout_below="@+id/tv_Name"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="14dp"
+            android:maxLines="2"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/btn_Edit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="编" />
+
+    </RelativeLayout>
+</LinearLayout>

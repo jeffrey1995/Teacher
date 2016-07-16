@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="my_order">我的订单</string>
+    <string name="my_public">我的发布</string>
+    <string name="sign_up_info">报名信息</string>
+    <string name="teacher_info">家教信息</string>
+    <string name="wait_accept">未接受</string>
+    <string name="accepted">已接受</string>
+    <string name="unaccepted">已拒绝</string>
+    <string name="finished">已完成</string>
+    <string name="subjectIs">科目:</string>
+    <string name="gradeIs">年级:</string>
+    <string name="salaryIs">总价:</string>
+    <string name="accept">接受</string>
+    <string name="refuse">拒绝</string>
+    <string name="name">姓名</string>
+    <string name="school">学校</string>
+    <string name="id_number">身份证号</string>
+    <string name="tel_number">手机</string>
+    <string name="description">个人简介</string>
+</resources>

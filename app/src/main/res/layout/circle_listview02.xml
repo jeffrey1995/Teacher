@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/color_white">
+    <RelativeLayout
+        android:id="@+id/friend_rl"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        >
+        <hc.teacher.user_defined_widget.RoundImageView
+            android:id="@+id/friend_image"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:layout_centerVertical="true"
+          />
+        <TextView
+            android:id="@+id/friend_name"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="郝朋友"
+            android:textSize="15sp"
+            android:layout_toRightOf="@id/friend_image"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true" />
+        <TextView
+            android:id="@+id/friend_note"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:text="人生就像一场旅行"
+            android:textSize="12sp"
+            android:layout_toRightOf="@id/friend_name"
+            android:layout_marginLeft="10dp"
+            android:layout_centerVertical="true" />
+        <ImageView
+            android:id="@+id/delete_img"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/delete_friend"
+            android:focusable="false"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

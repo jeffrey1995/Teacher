@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_color"
+    android:orientation="vertical">
+
+    <!--顶部导航栏-->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@color/theme_color"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/btn_GoBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:scaleType="fitCenter"
+            android:src="@drawable/go_back_white" />
+
+        <TextView
+            android:id="@+id/tv_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="真实资料"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/actionbar_font" />
+
+    </RelativeLayout>
+
+    <!--可下拉刷新部分-->
+    <com.jingchen.pulltorefresh.PullToRefreshLayout
+        android:id="@+id/refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/background_color">
+
+        <com.jingchen.pulltorefresh.PullableScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/background_color">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--审核进度-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="@dimen/margin_middle"
+                    android:orientation="horizontal"
+                    android:textCursorDrawable="@drawable/theme_color_cusor">
+
+                    <TextView
+                        android:id="@+id/tv_IndentifyState"
+                        style="@style/TextView_Prompt"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="这里是审核进度"
+                        android:textColor="#0F0" />
+
+                </LinearLayout>
+
+                <!--姓名、性别、学校、照片-->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="120dp"
+                    android:orientation="horizontal">
+
+                    <!--姓名、性别、学校-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="120dp"
+                        android:layout_weight="3"
+                        android:orientation="vertical">
+                        <!--姓名-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/normal_height"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/TextView_Prompt"
+                                android:layout_width="@dimen/zero"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:text="姓名"
+                                android:textSize="@dimen/font_size_small" />
+
+                            <EditText
+                                android:id="@+id/et_Name"
+                                style="@style/EditText"
+                                android:layout_width="@dimen/zero"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_small"
+                                android:layout_marginStart="@dimen/margin_small"
+                                android:layout_weight="5"
+                                android:hint="请输入身份证上姓名"
+                                android:maxLength="10"
+                                android:maxLines="1"
+                                android:singleLine="true" />
+
+                        </LinearLayout>
+
+                        <!--性别-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/normal_height"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/TextView_Prompt"
+                                android:layout_width="@dimen/zero"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:text="性别"
+                                android:textSize="@dimen/font_size_small" />
+
+                            <RadioGroup
+                                android:layout_width="@dimen/zero"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_small"
+                                android:layout_marginStart="@dimen/margin_small"
+                                android:layout_weight="5"
+                                android:background="@color/color_white"
+                                android:orientation="horizontal">
+
+                                <RadioButton
+                                    android:id="@+id/rb_Male"
+                                    style="@style/RadioButton"
+                                    android:layout_width="@dimen/zero"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:checked="true"
+                                    android:paddingLeft="5dp"
+                                    android:text="@string/option_find_gender_male"
+                                    android:textSize="@dimen/font_size_small" />
+
+                                <RadioButton
+                                    android:id="@+id/rb_Female"
+                                    style="@style/RadioButton"
+                                    android:layout_width="@dimen/zero"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:paddingLeft="5dp"
+                                    android:text="@string/option_find_gender_female"
+                                    android:textSize="@dimen/font_size_small" />
+
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <!--学校-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/normal_height"
+                            android:layout_marginTop="@dimen/margin_small"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                style="@style/TextView_Prompt"
+                                android:layout_width="@dimen/zero"
+                                android:layout_height="match_parent"
+                                android:layout_weight="3"
+                                android:text="学校"
+                                android:textSize="@dimen/font_size_small" />
+
+                            <EditText
+                                android:id="@+id/et_School"
+                                style="@style/EditText"
+                                android:layout_width="@dimen/zero"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="@dimen/margin_small"
+                                android:layout_marginStart="@dimen/margin_small"
+                                android:layout_weight="5"
+                                android:hint="请输入所在院校"
+                                android:maxLength="18"
+                                android:maxLines="1"
+                                android:singleLine="true" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <!--真实照片-->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1"
+                        android:background="#C3C3C3">
+
+                        <ImageView
+                            android:id="@+id/iv_Head"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:src="@drawable/upload_real_head" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!--身份证号-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/normal_height"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextView_Prompt"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9"
+                        android:text="身份证号"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <EditText
+                        android:id="@+id/et_IdentityNumber"
+                        style="@style/EditText"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_weight="23"
+                        android:hint="请输入身份证号码"
+                        android:maxLength="18"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <!--联系电话-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/normal_height"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextView_Prompt"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9"
+                        android:text="手机"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <EditText
+                        android:id="@+id/et_Phone"
+                        style="@style/EditText"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_weight="23"
+                        android:hint="@string/hint_find_phone"
+                        android:inputType="number"
+                        android:maxLength="11"
+                        android:maxLines="1"
+                        android:singleLine="true" />
+
+                </LinearLayout>
+
+                <!--个人介绍-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/bigger_height"
+                    android:layout_marginTop="@dimen/margin_middle"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/TextView_Prompt"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_weight="9"
+                        android:text="个人介绍"
+                        android:textSize="@dimen/font_size_small" />
+
+                    <EditText
+                        android:id="@+id/et_Description"
+                        style="@style/EditText"
+                        android:layout_width="@dimen/zero"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/margin_small"
+                        android:layout_marginStart="@dimen/margin_small"
+                        android:layout_weight="23"
+                        android:hint="请输入教学经验或获奖经历" />
+
+                </LinearLayout>
+
+                <!--提交按钮-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="160dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_Submit"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/normal_height"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/round_button"
+                        android:gravity="center"
+                        android:text="提交"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/font_size_middle" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </com.jingchen.pulltorefresh.PullableScrollView>
+    </com.jingchen.pulltorefresh.PullToRefreshLayout>
+
+</LinearLayout>
+

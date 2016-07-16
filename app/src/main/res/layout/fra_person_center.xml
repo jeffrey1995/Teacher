@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--顶部个人信息-->
+    <RelativeLayout
+        android:id="@+id/top_relativelayout"
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:background="@color/theme_color"
+        android:orientation="horizontal">
+
+        <hc.teacher.user_defined_widget.RoundImageView
+            android:id="@+id/head_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            />
+
+        <!---->
+        <TextView
+            android:id="@+id/tv_UserName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/head_img"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/head_img"
+            android:paddingTop="15dp"
+            android:textColor="@android:color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/tv_Description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/head_img"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/head_img"
+            android:paddingBottom="15dp"
+            android:textColor="@android:color/white" />
+
+        <!--<TextView-->
+            <!--android:id="@+id/tv_InfoAccomplished"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignBottom="@id/head_img"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_toRightOf="@id/head_img"-->
+            <!--android:paddingBottom="15dp"-->
+            <!--android:textColor="@android:color/white" />-->
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/person_myorder_rl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white">
+
+                <ImageView
+                    android:id="@+id/person_myorder_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/person_myorder_unselected" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/person_myorder_img"
+                    android:text="我的订单"
+                    android:textColor="#666666"
+                    android:textSize="18sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                />
+
+            <RelativeLayout
+                android:id="@+id/person_mypublish_rl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@android:color/white">
+
+                <ImageView
+                    android:id="@+id/person_mypublish_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/person_myspoor_unselected" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/person_mypublish_img"
+                    android:text="我的发布"
+                    android:textColor="#666666"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/person_mytask_rl"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/white">
+
+                <ImageView
+                    android:id="@+id/person_mytask_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/person_mytask_unselected" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/person_mytask_img"
+                    android:text="我的任务"
+                    android:textColor="#666666"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/person_mybag_rl"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:background="#ffffff">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/person_mybag_img"-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:background="@drawable/person_mybag_unselected" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_toRightOf="@id/person_mybag_img"-->
+                    <!--android:text="我的钱包"-->
+                    <!--android:textColor="#666666"-->
+                    <!--android:textSize="18sp" />-->
+
+            <!--</RelativeLayout>-->
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1px"
+                />
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/person_mygrade_rl"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:background="#ffffff">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/person_mygrade_img"-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:background="@drawable/person_mygrade_unselected" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_toRightOf="@id/person_mygrade_img"-->
+                    <!--android:text="我的评价"-->
+                    <!--android:textColor="#666666"-->
+                    <!--android:textSize="18sp" />-->
+            <!--</RelativeLayout>-->
+
+
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/person_collect_rl"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:background="#ffffff">-->
+
+                <!--<ImageView-->
+                    <!--android:id="@+id/person_collect_img"-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:background="@drawable/person_collect_unselected" />-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_toRightOf="@id/person_collect_img"-->
+                    <!--android:text="我的收藏"-->
+                    <!--android:textColor="#666666"-->
+                    <!--android:textSize="18sp" />-->
+            <!--</RelativeLayout>-->
+            <RelativeLayout
+                android:id="@+id/person_setting_rl"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff">
+
+                <ImageView
+                    android:id="@+id/person_setting_img"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/person_setting_unselected" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@id/person_setting_img"
+                    android:text="设置"
+                    android:textColor="#666666"
+                    android:textSize="18sp" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

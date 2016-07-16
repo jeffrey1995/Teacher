@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="actionbar_name">主页</string>
+    <string name="chinese">语文</string>
+    <string name="math">数学</string>
+    <string name="english">英语</string>
+    <string name="physics">物理</string>
+    <string name="chem">化学</string>
+    <string name="biology">生物</string>
+    <string name="geography">地理</string>
+    <string name="history">历史</string>
+    <string name="politics">政治</string>
+    <string name="other">其它</string>
+    <string name="consult_online">  在线咨询</string>
+    <string name="answer_online">  在线答题</string>
+    <string name="mien">  风采展示</string>
+    <string name="more_mien">更多风采>  </string>
+    <string name="gaokao">  高考专题</string>
+    <string name="more_gaokao">点此进入>  </string>
+    <string name="forum">  人人论坛</string>
+    <string name="more_forum">更多内容>  </string>
+    <string name="wait_answer">等你回答</string>
+    <string name="ask_question">我要问题</string>
+    <string name="check_answer">查看答案</string>
+    <string name="question_summary">问题概述</string>
+    <string name="question_summary_please">请在这里概述您的问题</string>
+    <string name="your_questions">您的问题</string>
+    <string name="question_another">问题补充：</string>
+    <string name="question_detail">您可以在这里详细描述您的问题</string>
+    <string name="remind_me">收到答案提醒我</string>
+    <string name="anonymous">匿名</string>
+    <string name="commit_question">提交问题</string>
+</resources>

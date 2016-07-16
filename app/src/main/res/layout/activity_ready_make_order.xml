@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/action_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@color/theme_color">
+
+        <Button
+            android:id="@+id/btn_return"
+            android:layout_width="15dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="5dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/go_back_white"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="@string/teacher_info"
+            android:textColor="#FFFFFF"
+            android:textSize="@dimen/actionbar_font" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                android:layout_alignParentTop="true"/>
+
+            <Button
+                android:id="@+id/chat_btn"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_button"
+                android:text="@string/chat_with"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                android:layout_alignParentTop="true"/>
+
+            <Button
+                android:id="@+id/make_order_btn"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_button"
+                android:text="@string/i_want"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--姓名、性别、学校、照片-->
+    <LinearLayout
+        android:id="@+id/info1"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:layout_below="@id/action_bar"
+        android:orientation="horizontal">
+
+        <!--姓名、性别、学校-->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="120dp"
+            android:layout_weight="3"
+            android:orientation="vertical">
+            <!--姓名-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_height"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextView_Prompt"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="@string/name"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:id="@+id/teacher_name"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:padding="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:background="#FFFFFF"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <!--性别-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_height"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextView_Prompt"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="@string/gender"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:id="@+id/teacher_gender"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:padding="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:background="#FFFFFF"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <!--学校-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/normal_height"
+                android:layout_marginTop="@dimen/margin_small"
+                android:orientation="horizontal">
+
+                <TextView
+                    style="@style/TextView_Prompt"
+                    android:layout_width="@dimen/zero"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="@string/school"
+                    android:textSize="@dimen/font_size_small" />
+
+                <TextView
+                    android:id="@+id/teacher_school"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="5"
+                    android:padding="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/margin_small"
+                    android:background="#FFFFFF"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--真实照片-->
+        <ImageView
+            android:id="@+id/teacher_head"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:background="#FFFFFF"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <!--身份证号-->
+    <LinearLayout
+        android:id="@+id/info2"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_height"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_below="@id/info1"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextView_Prompt"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:text="@string/id_number"
+            android:textSize="@dimen/font_size_small" />
+
+        <TextView
+            android:id="@+id/teacher_id_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="23"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:background="#FFFFFF"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <!--联系电话-->
+    <LinearLayout
+        android:id="@+id/info3"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/normal_height"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_below="@id/info2"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextView_Prompt"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:text="@string/tel_number"
+            android:textSize="@dimen/font_size_small" />
+
+        <TextView
+            android:id="@+id/teacher_tel_number"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="23"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:background="#FFFFFF"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/info4"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bigger_height"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/info3"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/TextView_Prompt"
+            android:layout_width="@dimen/zero"
+            android:layout_height="match_parent"
+            android:layout_weight="9"
+            android:text="@string/description"
+            android:textSize="@dimen/font_size_small" />
+
+        <TextView
+            android:id="@+id/teacher_description"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="23"
+            android:padding="5dp"
+            android:gravity="center_vertical"
+            android:layout_marginLeft="@dimen/margin_small"
+            android:background="#FFFFFF"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/info4"
+        android:paddingTop="@dimen/margin_middle"
+        android:gravity="center"
+        android:text="此用户未进行真实信息认证，请谨慎选择！"
+        android:textSize="15sp"/>
+
+</RelativeLayout>

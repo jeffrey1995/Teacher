@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_MainContainer"
+    android:layout_width="@dimen/dialog_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/tv_Title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/item_height"
+        android:background="@color/theme_color"
+        android:gravity="center"
+        android:textColor="@color/color_white" />
+
+    <EditText
+        android:id="@+id/et_Input"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:gravity="left"
+        android:layout_weight="1"
+        android:background="@color/color_white"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:textCursorDrawable="@drawable/theme_color_cusor" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_marginBottom="@dimen/padding"
+        android:layout_marginTop="@dimen/padding"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_Submit"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginEnd="@dimen/padding"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_marginStart="@dimen/padding"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:text="修改"
+            android:textColor="@color/color_white" />
+
+        <Button
+            android:id="@+id/btn_Cancel"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_marginEnd="@dimen/padding"
+            android:layout_marginLeft="@dimen/padding"
+            android:layout_marginRight="@dimen/padding"
+            android:layout_marginStart="@dimen/padding"
+            android:layout_weight="1"
+            android:background="@drawable/round_button"
+            android:text="取消"
+            android:textColor="@color/color_white" />
+    </LinearLayout>
+
+
+</LinearLayout>

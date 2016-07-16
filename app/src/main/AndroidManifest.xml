@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hc.teacher.application"
+    android:installLocation="auto" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="18" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/teacher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme"
+        >
+        <meta-data
+            android:name="TencentMapSDK"
+            android:value="@string/tencent_map_key" />
+
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan">
+
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/action_login"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".RegisterActivity"
+            android:label="@string/title_activity_register"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".CircleActivity"
+            android:label="@string/title_activity_circle"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity
+            android:name="hc.teacher.activity_circle.Circle_NewFriendActivity"
+            android:label="@string/title_activity_circle__publish"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="hc.teacher.activity_person.RealInfoActivity"
+            android:label="@string/title_activity_person_change_information"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".PublishActivity"
+            android:label="@string/title_activity_publish"
+            android:screenOrientation="portrait"/>
+        <activity android:name="hc.teacher.activity_teacher_center.ApplyInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="hc.teacher.activity_teacher_center.EmployInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="hc.teacher.activity_teacher_center.MakeOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="hc.teacher.components.location.SelectCityActivity"
+            android:label="@string/title_activity_select_city"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="hc.teacher.components.crop_image.CropImage"
+            android:label="@string/title_activity_crop_image"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="hc.teacher.components.crop_image.MonitoredActivity"
+            android:label="@string/title_activity_monitored"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="hc.teacher.components.crop_image.NoSearchActivity"
+            android:label="@string/title_activity_no_search_activity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="hc.teacher.fragment.ConversationActivity"
+            android:label="@string/title_activity_conversation"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="hc.teacher.application"
+                    android:pathPrefix="/conversation/"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="hc.teacher.fragment.ConversationListActivity"
+            android:label="@string/title_activity_conversation_list"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:host="hc.teacher.application"
+                    android:pathPrefix="/conversationlist"
+                    android:scheme="rong" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="hc.teacher.data.DBTestActivity"
+            android:label="@string/title_activity_dbtest"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="hc.teacher.activity_person.SettingActivity"
+            android:label="@string/title_activity_setting"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="hc.teacher.activity_homepage.ConsultOnlineActivity" />
+
+        <activity
+            android:name="hc.teacher.activity_person.SelfInfoActivity"
+            android:label="@string/title_activity_self_info"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="hc.teacher.activity_person.UserIconActivity"
+            android:label="@string/title_activity_user_icon"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="hc.teacher.activity_person.ModifyPasswordActivity"
+            android:label="@string/title_activity_modify_password"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="hc.teacher.activity_person.MyOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="hc.teacher.activity_person.CheckOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="hc.teacher.activity_person.MyPublishActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="hc.teacher.activity_teacher_center.SelectContactActivity"
+            android:label="@string/title_activity_select_contact"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="hc.teacher.activity_teacher_center.EditContactActivity"
+            android:label="@string/title_activity_edit_contact"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="hc.teacher.activity_teacher_center.AddNewContactActivity"
+            android:label="@string/title_activity_add_contact"
+            android:screenOrientation="portrait"/>
+
+        <activity android:name="hc.teacher.activity_person.SignUpInfoActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name="hc.teacher.activity_person.ReadyMakeOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".WelcomeActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="hc.teacher.activity_person.MyTaskActivity"
+            android:label="@string/title_activity_my_task"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="hc.teacher.activity_homepage.AnswerListActivity"
+            android:screenOrientation="portrait"></activity>
+        <activity android:name="hc.teacher.activity_homepage.AnswerOnlineActivity"
+            android:screenOrientation="portrait">
+            <!--<intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>-->
+        </activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/dialog_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/background_color">
+
+    <TextView
+        android:id="@+id/tv_Title"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/item_height"
+        android:background="@color/theme_color"
+        android:gravity="center"
+        android:textColor="@color/color_white" />
+
+    <Button
+        android:id="@+id/btn_Male"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/item_height"
+        android:text="男" />
+
+    <Button
+        android:id="@+id/btn_FeMale"
+        android:layout_marginTop="2dp"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/item_height"
+        android:text="女" />
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background_color"
+    tools:context="hc.teacher.activity_teacher_center.SelectContactActivity">
+
+    <!--顶部导航栏-->
+    <RelativeLayout
+        android:id="@+id/rl_Top"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:layout_alignParentTop="true"
+        android:background="@color/theme_color">
+
+        <ImageButton
+            android:id="@+id/btn_GoBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:paddingLeft="@dimen/padding"
+            android:paddingRight="@dimen/padding"
+            android:scaleType="fitCenter"
+            android:src="@drawable/go_back_white" />
+
+        <TextView
+            android:id="@+id/tv_Title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:text="联系方式"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/actionbar_font" />
+
+    </RelativeLayout>
+
+    <!--联系方式列表-->
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_Contact"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_AddNewContact"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/rl_Top"
+        android:scrollbars="vertical" />
+
+    <!--新增联系方式-->
+    <TextView
+        android:id="@+id/tv_AddNewContact"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_alignParentBottom="true"
+        android:background="#CFCFCF"
+        android:gravity="center"
+        android:text="新增联系方式"
+        android:textColor="#0f0" />
+
+</RelativeLayout>

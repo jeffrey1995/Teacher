@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="theme_color">#FFCC33</color>-->
+    <color name="theme_color">#E27E58</color>
+    <color name="main_chars">#8e8e8e</color>
+    <color name="separation_line">#cccccc</color>
+    <color name="background_color">#F5F0E9</color>
+    <color name="color_grey">#A5A4A0</color>
+    <color name="disabled">#F19674</color>
+    <color name="color_white">#FFFFFF</color>
+    <color name="selected">#E1693B</color>
+    <color name="hint_color">#C5BFAC</color>
+    <color name="selected_grey">#C5C1AA</color>
+    <color name="homepage1">#9BA0A1</color>
+    <color name="homepage2">#847F7F</color>
+    <color name="homepage3">#AAA8A8</color>
+
+</resources>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/mess_head_image"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_launcher"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/mess_from_name_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="客服姐姐:"
+        android:textSize="15sp"
+        android:layout_toRightOf="@id/mess_head_image"
+        android:layout_alignTop="@id/mess_head_image"/>
+
+    <TextView
+        android:id="@+id/mess_content_text"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:text="  您好！我是客服姐姐。。。我是客服姐姐。。。我是客服姐姐。。。我是客服姐姐。。。"
+        android:textSize="12sp"
+        android:layout_toRightOf="@id/mess_head_image"
+        android:layout_below="@id/mess_from_name_text"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+    <TextView
+        android:id="@+id/mess_datetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2015-10-1"
+        android:textSize="10sp"
+        android:layout_below="@id/mess_content_text"
+        android:layout_alignRight="@id/mess_content_text"
+        android:layout_marginRight="20dp"
+        />
+
+
+</RelativeLayout>

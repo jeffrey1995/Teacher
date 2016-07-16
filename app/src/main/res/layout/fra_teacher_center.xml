@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/actionBar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@color/theme_color">
+
+        <ImageButton
+            android:id="@+id/publish_imbtn"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginLeft="5dp"
+            android:scaleType="fitCenter"
+            android:layout_centerVertical="true"
+            android:background="#00000000"
+            android:src="@drawable/teacher_center_publish"/>
+
+        <LinearLayout
+            android:id="@+id/find_or_do"
+            android:layout_width="60dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/teacher_center_title"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/find_tutor_tv"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="@string/find"/>
+
+            <TextView
+                android:id="@+id/do_tutor_tv"
+                android:layout_width="30dp"
+                android:layout_height="24dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:text="@string/be"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_toLeftOf="@id/find_or_do"
+            android:layout_marginRight="5dp"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:text="@string/i_will"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_toRightOf="@id/find_or_do"
+            android:layout_marginLeft="5dp"
+            android:textSize="16sp"
+            android:textColor="#FFFFFF"
+            android:text="@string/teacher"/>
+
+        <ImageButton
+            android:id="@+id/around_imbtn"
+            android:layout_width="25dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="5dp"
+            android:scaleType="fitCenter"
+            android:background="#00000000"
+            android:src="@drawable/search"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/searchBar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:visibility="invisible"
+        android:background="@drawable/search_bar"
+        android:paddingLeft="40dp"
+        android:paddingRight="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp">
+
+        <TextView
+            android:id="@+id/cancel"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:background="#00000000"/>
+
+        <EditText
+            android:id="@+id/editText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:singleLine="true"
+            android:imeOptions="actionSearch"
+            android:background="@null"
+            android:layout_toLeftOf="@id/cancel"
+            android:textSize="12sp"
+            android:hint="@string/please_input_to_search"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/info_viewpager"
+        android:layout_below="@id/searchBar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</RelativeLayout>

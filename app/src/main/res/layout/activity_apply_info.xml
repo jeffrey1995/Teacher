@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="#FFFFFF">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                android:layout_alignParentTop="true"/>
+
+            <Button
+                android:id="@+id/chat_btn"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_button"
+                android:text="@string/chat_with"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1">
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"
+                android:layout_alignParentTop="true"/>
+
+            <Button
+                android:id="@+id/make_order_btn"
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/round_button"
+                android:text="@string/i_want"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/check_real_info"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/theme_color"
+                android:paddingTop="10dp">
+
+                <ImageButton
+                    android:id="@+id/return_btn"
+                    android:layout_width="15dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="5dp"
+                    android:background="#00000000"
+                    android:src="@drawable/go_back_white"/>
+
+                <hc.teacher.user_defined_widget.RoundImageView
+                    android:id="@+id/person_head"
+                    android:layout_toRightOf="@id/return_btn"
+                    android:layout_marginLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"/>
+
+                <TextView
+                    android:id="@+id/person_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_toRightOf="@id/person_head"
+                    android:textSize="20sp"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/person_school"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/person_head"
+                    android:layout_below="@id/person_name"
+                    android:textSize="15sp"
+                    android:textColor="#FFFFFF"/>
+
+                <ImageView
+                    android:id="@+id/identity1"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/person_head"
+                    android:layout_below="@id/person_school"
+                    android:src="@drawable/identity"/>
+                <TextView
+                    android:id="@+id/id1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/identity1"
+                    android:layout_below="@id/person_school"
+                    android:textColor="#FFFFFF"
+                    android:text="@string/identity1"/>
+                <ImageView
+                    android:id="@+id/identity2"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@id/id1"
+                    android:layout_below="@id/person_school"
+                    android:src="@drawable/identity"/>
+                <TextView
+                    android:id="@+id/id2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/identity2"
+                    android:layout_below="@id/person_school"
+                    android:textColor="#FFFFFF"
+                    android:text="@string/identity2"/>
+                <ImageView
+                    android:id="@+id/identity3"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_toRightOf="@id/person_head"
+                    android:layout_below="@id/identity1"
+                    android:layout_marginLeft="5dp"
+                    android:src="@drawable/identity"/>
+                <TextView
+                    android:id="@+id/id3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:layout_toRightOf="@id/identity3"
+                    android:layout_below="@id/identity1"
+                    android:textColor="#FFFFFF"
+                    android:text="@string/identity3"/>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="学生：117"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="上课时长：1000"/>
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="好评率：100%"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="13sp"
+                android:gravity="center_vertical"
+                android:background="#FFFFFF"
+                android:paddingLeft="5dp"
+                android:text="@string/course_info"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="@string/teach_subject"
+                    android:textSize="15sp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"/>
+
+                <TextView
+                    android:id="@+id/subject"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:padding="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="@string/fitGrade"
+                    android:textSize="15sp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"/>
+
+                <TextView
+                    android:id="@+id/fit_grade"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:padding="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="@string/area"
+                    android:textSize="15sp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"/>
+
+                <TextView
+                    android:id="@+id/area"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:padding="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="@string/work_time"
+                    android:textSize="15sp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"/>
+
+                <TextView
+                    android:id="@+id/when"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:padding="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:text="薪资要求"
+                    android:textSize="15sp"/>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="?android:attr/listDivider"/>
+
+                <TextView
+                    android:id="@+id/salary"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="5"
+                    android:padding="5dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:textSize="15sp"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="13sp"
+                android:gravity="center_vertical"
+                android:background="#FFFFFF"
+                android:paddingLeft="5dp"
+                android:text="@string/teach_result"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:text="  田田这么叼的人都是我教出来的"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:textSize="13sp"
+                android:gravity="center_vertical"
+                android:background="#FFFFFF"
+                android:text="@string/pingjia"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF"
+                android:textSize="15sp"
+                android:padding="5dp"
+                android:text="  暂无评价"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="?android:attr/listDivider"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

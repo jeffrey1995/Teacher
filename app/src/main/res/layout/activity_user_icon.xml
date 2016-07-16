@@ -1,0 +1,30 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="hc.teacher.activity_person.UserIconActivity"
+    android:background="#1A1A1A">
+
+    <ImageView
+        android:id="@+id/iv_UserIcon"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:scaleType="fitXY" />
+
+    <Button
+        android:id="@+id/btn_ChangeUserIcon"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#2C8135"
+        android:textColor="#8DBB92"
+        android:layout_marginTop="80dp"
+        android:text="更换头像"/>
+
+</LinearLayout>
